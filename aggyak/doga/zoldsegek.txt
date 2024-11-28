@@ -1,0 +1,6 @@
+Káposzta;1200;150;2015
+Paprika;500;300;2018
+Sárgarépa;900;120;2012
+Paprikafélék;800;250;2020
+Hagyma;2000;100;2008
+Paradicsom;1300;200;2017
