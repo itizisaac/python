@@ -1,0 +1,20 @@
+Termék;Ár (Ft);Eladott mennyiség;Év  
+Akvarell papír;2000;15;2018  
+Ceruzakészlet;1500;20;2020  
+Ecsetkészlet;3500;10;2019  
+Csomagolópapír;1000;30;2021  
+Canvas vászon;5000;5;2018  
+Művészkés;2500;12;2022  
+Pasztell kréta;1800;25;2020  
+Festékszóró;4500;8;2021  
+Vászon alap;3000;18;2019  
+Olajfesték készlet;7000;6;2022  
+Rajztábla;3500;14;2020  
+Festőpaletta;1200;20;2018  
+Szénceruza;900;40;2021  
+Papírvágó olló;800;50;2020  
+Grafikai tollkészlet;2700;22;2019  
+Csepegtető papír;1200;17;2021  
+Ceruzatartó;1800;25;2022  
+Csiszolópapír;1500;30;2020  
+Cirkuláris sablon;3500;15;2019  
