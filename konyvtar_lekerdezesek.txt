@@ -1,0 +1,38 @@
+
+1. Minden könyv listázása szerzővel és kiadási évvel:
+SELECT cim, szerzo, ev FROM konyvek;
+
+2. Minden olvasó neve és e-mail címe:
+SELECT nev, email FROM olvasok;
+
+3. Összes aktív (még vissza nem hozott) kölcsönzés:
+SELECT o.nev, k.cim, kz.kolcsonzes_datum
+FROM kolcsonzesek kz
+JOIN olvasok o ON kz.olvaso_id = o.id
+JOIN konyvek k ON kz.konyv_id = k.id
+WHERE kz.visszahozas_datum IS NULL;
+
+4. Könyvek, amiket legalább egyszer kikölcsönöztek:
+SELECT DISTINCT k.cim, k.szerzo
+FROM kolcsonzesek kz
+JOIN konyvek k ON kz.konyv_id = k.id;
+
+5. Olvasók, akik kölcsönöztek könyvet márciusban:
+SELECT DISTINCT o.nev
+FROM kolcsonzesek kz
+JOIN olvasok o ON kz.olvaso_id = o.id
+WHERE MONTH(kz.kolcsonzes_datum) = 3;
+
+6. Hány könyvet kölcsönzött egy adott olvasó (pl. "Kovács Anna"):
+SELECT COUNT(*) AS kolcsonzes_szam
+FROM kolcsonzesek kz
+JOIN olvasok o ON kz.olvaso_id = o.id
+WHERE o.nev = 'Kovács Anna';
+
+7. Legutóbbi 5 kölcsönzés:
+SELECT o.nev, k.cim, kz.kolcsonzes_datum
+FROM kolcsonzesek kz
+JOIN olvasok o ON kz.olvaso_id = o.id
+JOIN konyvek k ON kz.konyv_id = k.id
+ORDER BY kz.kolcsonzes_datum DESC
+LIMIT 5;
